@@ -14,7 +14,7 @@ git push -u origin main
 
 desde el visual.
 
-Para actualizar el repositorio local
+Para actualizar el repositorio local xd
 git pull 
 
 

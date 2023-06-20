@@ -14,8 +14,8 @@ git push -u origin main
 
 desde el visual.
 
-
-git pull origin master
+Para actualizar el repositorio local
+git pull 
 
 
 repositorio para prueba y examen

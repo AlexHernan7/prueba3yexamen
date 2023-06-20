@@ -1,0 +1,507 @@
+/*Menu bar*/
+
+header{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Logo empresa barmenu*/
+.logo img {
+    max-height: 100px;
+    margin-left: 50px;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: white;
+    margin-right: 20px;
+}
+.menu {
+    display: block;
+}
+.menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+header nav a{
+    line-height:normal;
+    padding: 2px 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav a:hover{
+    background-color: #3f3f3f;
+    border-radius: 20px;
+    transition: 0.8s;
+}
+
+
+/*Carousel-imagenes*/
+.carousel-inner img{
+	margin: auto;
+	display: flex;
+	max-width: 100%;
+	height: auto;
+	align-items: center;
+	justify-content: center;
+    padding-top: 98px;
+    position: relative;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body{
+    text-align: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+
+
+.tittle{
+    padding-top: 30px;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    font-size: 55px;
+}
+
+p{
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+#subti{
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+}
+/*imagenes body*/
+.freno img, #imagen1{
+    margin-top: 65px;
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+#freno1{
+    font-family: 'Permanent Marker', cursive;
+    left: 560px;
+    top: -50px;
+    text-align: center;
+}
+.container{
+    text-align: center;
+}
+
+/*Pie de pagina*/
+.pie-pagina{
+    width: 100%;
+    background-color: black;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 20px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    max-width: 60%;
+    margin-left: 50px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: white;
+    font-size: 15px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: white;
+    font-size: 13px;
+}
+.pie-pagina .grupo-2{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: -21px;
+}
+
+/*Iconos redes sociales*/
+.rs i{
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 30px;
+    padding: 1px;
+}
+
+
+/*Pagina nosotros*/
+
+.tittleNosotros{
+    padding-top: 130px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 45px;
+}
+
+#quienes{
+    text-align: left;
+    margin-top: 50px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#desc{
+    text-align: left;
+    font-family: 'Helvetica';
+}
+/*subtitulo mision y vision*/
+#mision{
+    text-align: left;
+    margin-top: 50px;
+    font-family: 'Permanent Marker', cursive;
+}
+/*Mision y vision*/
+#mivi{
+    text-align: left;
+    font-family: 'Helvetica';
+}
+
+#val{
+    background-color:white;
+    color: black;
+    font-weight: bold;
+    height: 150px;
+    width: 100%;
+    text-align:center;
+    padding-top:15px ;
+    border-radius: 15px;
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#valores{
+    margin-top: 20px;
+    border: 20px 20px;  
+
+}
+.tittleValores{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Permanent Marker', cursive;
+}
+#fondo{
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/*Galería*/
+#espacio{
+    padding-bottom: 160px;
+}
+
+
+div.galeria{
+    margin: 10px 20px;
+    box-shadow: 0 8px 10px 0 rgb(34, 70, 233), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    width: 350px;
+    font-family: 'Permanent Marker', cursive;
+    margin-left: 50px;
+}
+
+div.galeria img{
+    width: 100%;
+    height: auto;
+}
+
+div.galeria:hover{
+    border: 5px solid rgb(34, 70, 233);
+    transform: rotate(-3deg);
+}
+
+div.pie{
+    text-align: center;
+    text-shadow: 1px 1px 5px gray;
+    padding: 10px;
+}
+
+#tittleGaleria{
+    padding-top: 100px;
+    font-family: 'Permanent Marker', cursive;
+}
+/*Inicio Pagina contacto*/
+
+#titContacto{
+    padding-top: 130px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+#contacto{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        180deg,
+        rgba(37,34,63,1) 0%,
+        rgba(31,61,98,1) 50%,
+        rgba(35,40,72,1) 100%
+    );
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+form{
+    padding: 50px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 29%,
+        rgba(155, 155,186, 1) 100%,
+        rgba(0, 212, 255,1) 100%
+    );
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    text-align: left;
+    
+    flex-direction: column;
+}
+
+.form-group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+    margin-bottom: 40px;
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    color: #f5fcff;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+input, textarea{
+    padding: 20px 15px;
+    background-color: #283b64;
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    color: #f5fcff;
+    font-size: 16px;
+}
+
+::placeholder{
+    color: #949fbd;
+    font-size: 16px;
+}
+
+textarea{
+    margin-bottom: 40px; 
+}
+.textoo{
+    margin-right: -350px;
+}
+#message{
+    width: 489px;
+    padding:auto;
+}
+
+.btn{
+    padding: 17px 15px;
+    width: 180px;
+    align-self: center;
+    display: flex;
+    text-transform: capitalize;
+    color: #f5fcff;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+#select-box{
+    border: none;
+    background-color: #283b64;
+    color: white;
+    font-size: 16px;
+    padding: 20px 15px; 
+    border-radius: 25px;
+}
+#select-box option{
+    border-radius: 25px;
+}
+
+.formulario, form{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    form {
+      padding: 20px;
+      max-width: 100%;
+    }
+    
+    .form-group {
+      grid-template-columns: 1fr;
+    }
+    
+    input, textarea, option {
+      width: 100%;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+    #message{
+        width: 228px;
+        padding:auto;
+    }
+  }
+
+/*Fin pagina contacto*/
+
+
+/*Page Vehicles*/
+
+.resultado-info{
+    box-shadow: 0 8px 10px 0 rgb(13, 204, 45), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Permanent Marker', cursive;
+    padding: 10px;
+    background: url(../imagenes/tunnningcar.png);
+    color: white;
+    text-shadow: black 2px 1px;
+    background-position: center;
+    border-radius: 10px;
+    min-height: 200px; 
+}
+
+.venta-vehiculos{
+    font-family: 'Permanent Marker', cursive;
+}
+
+/*Ajustes pantallas pequeñas*/
+
+
+@media screen and (max-width: 1000px) {
+	header .logo, header nav {
+		width:100%;
+		text-align:center;
+		line-height:100px;
+		font-size: 35px;
+	}
+    header nav a {
+        padding:10px 10px;
+    }
+    .carousel-inner img{
+        padding-top: 260px;
+    }
+
+    .tittleNosotros{
+        padding-top: 130px;
+    }
+    #fondo #val{
+        font-size: 13px;
+    }
+    .carousel-inner img{
+        padding-top: 100px;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 0;
+        font-size: 1px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-out; /* Agrega la transición */
+    }
+
+    #menu-toggle:checked ~ .menu {
+        max-height: 170px;
+        display: block;
+    }
+
+    #menu-toggle:not(:checked) ~ .menu {
+        max-height: 0;
+        display: block;
+        transition: max-height 0.5s ease-out;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    
+    #menu-toggle:checked ~ .menu {
+        display: block;
+    }
+
+
+    #fondo{
+        width: 90%;
+    }
+    #valores{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .tittleValores{
+        font-size: 37px;
+    }
+
+    div.galeria {
+        margin-left: 40px;
+    }
+}
+

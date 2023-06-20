@@ -1,0 +1,28 @@
+echo "# alexMazuela_diegoRojas" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AlexHernan7/alexMazuela_diegoRojas.git
+git push -u origin main
+
+--para subir cambios
+
+git add .
+git commit -m "nombre del cambio"
+git push -u origin main
+
+desde el visual.
+
+
+git pull origin master
+
+
+repositorio para prueba y examen
+
+git init 
+git add README.md 
+git commit -m "first commit" 
+git branch -M main 
+git remote add origin https://github.com/AlexHernan7/prueba3yexamen.git
+ git push - u origen principal

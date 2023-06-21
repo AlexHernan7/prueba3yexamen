@@ -4,60 +4,59 @@
 
 {% block contenido%}
 
+<body id="contacto"> 
 <!-- TITULO-->
-<h1 id="titContacto">Contacto</h1>
-    
+<h1 class="titC" style="padding-top: 130px; font-family: 'Permanent Marker'; font-size: 50px; text-align: center; color: white;">Contacto</h1>    
 <!-- Formulario-->
-
-<div class="formulario">
-    <form action="" method="post" name="form" id="formulario">
-        <div class="form-group" >
-            <div class="form-content">
-                <label for="name">Nombres</label>
-                <input type="text" id="name" name="name" placeholder="xxxxxx" maxlength="30" minlength="2" pattern="[A-Za-z]+">
+    <div class="formulario">
+        <form action="" method="post" name="form" id="formulario">
+            <div class="form-group" >
+                <div class="form-content">
+                    <label for="name">Nombres</label>
+                    <input type="text" id="name" name="name" placeholder="xxxxxx" maxlength="30" minlength="2" pattern="[A-Za-z]+">
+                </div>
+                <div class="form-content">
+                    <label for="apPaterno">Apellido Paterno</label>
+                    <input type="text" id="apPaterno" name="name" placeholder="xxxxxx" maxlength="30" minlength="3" pattern="[A-Za-z]+">
+                </div>
+                <div class="form-content">
+                    <label for="apMaterno">Apellido Materno</label>
+                    <input type="text" id="apMaterno" name="name" placeholder="xxxxxx" maxlength="30" minlength="3" pattern="[A-Za-z]+">
+                </div>
+                <div class="form-content">
+                    <label for="rut">Rut</label>
+                    <input type="text" id="rut" name="rut" placeholder="9999999-9" maxlength="10" minlength="9" pattern="[0-9\-]+">
+                </div>
+                <div class="form-content" id="box-container">
+                    <label for="select-box">Genero</label>
+                    <select name="select" id="select-box">
+                        <option value="" selected>Seleccione un genero</option>
+                        <option value="F">Femenino</option>
+                        <option value="M">Masculino</option>
+                    </select>
+                </div>
+                
+                <div class="form-content">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="name" placeholder="xxxxxxx" maxlength="60" minlength="15">
+                </div>
+                <div class="form-content">
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" name="email" placeholder="xxxxxxx@xxx.xx">
+                </div>
+                <div class="form-content">
+                    <label for="phone">Telefono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="569xxxxxxxx" pattern="^[0-9]+$" maxlength="11" minlength="11" >
+                </div>
+                <div class="form-content">
+                    <label for="message">Mensaje</label>
+                <textarea class="textoo" type="message" id="message" cols="30" rows="10" placeholder="Mensaje" maxlength="300"></textarea>
+                </div>
             </div>
-            <div class="form-content">
-                <label for="apPaterno">Apellido Paterno</label>
-                <input type="text" id="apPaterno" name="name" placeholder="xxxxxx" maxlength="30" minlength="3" pattern="[A-Za-z]+">
+            <div class="form-content" id="">
+                <input class="btn" type="submit" name="contact" value="Enviar Mensaje" style="background-color: #283b64; color: white;">
             </div>
-            <div class="form-content">
-                <label for="apMaterno">Apellido Materno</label>
-                <input type="text" id="apMaterno" name="name" placeholder="xxxxxx" maxlength="30" minlength="3" pattern="[A-Za-z]+">
-            </div>
-            <div class="form-content">
-                <label for="rut">Rut</label>
-                <input type="text" id="rut" name="rut" placeholder="9999999-9" maxlength="10" minlength="9" pattern="[0-9\-]+">
-            </div>
-            <div class="form-content" id="box-container">
-                <label for="select-box">Genero</label>
-                <select name="select" id="select-box">
-                    <option value="" selected>Seleccione un genero</option>
-                    <option value="F">Femenino</option>
-                    <option value="M">Masculino</option>
-                </select>
-            </div>
-            
-            <div class="form-content">
-                <label for="direccion">Dirección</label>
-                <input type="text" id="direccion" name="name" placeholder="xxxxxxx" maxlength="60" minlength="15">
-            </div>
-            <div class="form-content">
-                <label for="email">Correo</label>
-                <input type="email" id="email" name="email" placeholder="xxxxxxx@xxx.xx">
-            </div>
-            <div class="form-content">
-                <label for="phone">Telefono</label>
-                <input type="tel" id="phone" name="phone" placeholder="569xxxxxxxx" pattern="^[0-9]+$" maxlength="11" minlength="11" >
-            </div>
-            <div class="form-content">
-                <label for="message">Mensaje</label>
-            <textarea class="textoo" type="message" id="message" cols="30" rows="10" placeholder="Mensaje" maxlength="300"></textarea>
-            </div>
-        </div>
-        <div class="form-content" id="">
-            <input class="btn" type="submit" name="contact" value="Enviar Mensaje" style="background-color: #283b64; color: white;">
-        </div>
-    </form>
-</div>
-
+        </form>
+    </div>
+</body>
 {% endblock%}

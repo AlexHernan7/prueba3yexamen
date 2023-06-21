@@ -1,0 +1,113 @@
+{% extends 'productos/base.html'%}
+
+{% load static%}
+
+{% block contenido%}
+
+<div class="container" style="margin-bottom: 30px; padding-top: 130px;" id="tittleGaleria">
+    <div>
+        <h1 >Taller⚡McQueen</h1>
+        <h1 >Trabajos nuestros</h1>
+    </div>
+</div>
+
+<!-- Imagenes Galeria -->
+<div class="container">
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/autosupra.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>Taller mecánico</p>
+            <p>Carros tuneados a tope</p>
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/frenos.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>Frenos</p>
+            <p>¿Quieres driftear como un Japones? En conjunto con Brembo te ofrecemos lo mejor en pastillas</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" >
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/apiso.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>Amortiguadores</p>
+            <p>¿Deseas lucir como un Lowrider en tú V6 con más caballos de los que hay en un hipódromo?</p>
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/motores.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>Motores</p>
+            <p>¿Creerías posible convertir tu Morning en un crimen ecológico? con nuestros V10 5.7L lo hacemos posible!</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/luces.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>Electrónica</p>
+            <p>Modificaciones aplicadas (Pantallas desplegables, Luces de neón, Paneles interiores)</p>
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/escape.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>Escapes</p>
+            <p>Quieres que tu carro suene como un toro? Acércate a ver nuestros ejemplares</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/llanta.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>Llantas</p>
+            <p>¿Quieres llenar tu carro de Drip a lo NeedForSpeed? Aquí tenemos lo que buscas</p>
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/nissan.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>BodyKits exlusivos</p>
+            <p>Taller⚡McQueen Trae lo mejor en exclusividad, con prioridad en envíos</p>
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="{% static 'productos/img/talleres.jpg' %}" alt="">
+        </div>
+        <div class="pie">
+            <p>Juntas y eventos</p>
+            <p>En colaboración con marcas como Apiso o BBS, te traemos convenciones alrededor del mundo</p>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top: 1450px;">
+    <img src="{% static 'productos/img/cinta.png' %}" alt="cinta" style="width: 100%; height: 100px;">
+</div>
+
+{% endblock %}

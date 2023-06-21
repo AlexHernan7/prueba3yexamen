@@ -1,0 +1,5 @@
+Diego pase todas las paginas a django
+en la pagina contacto el titulo lo toma en blanco y sin el fondo no cacho por que
+trate de modificarlo pero no hubo caso.
+
+y en la api que hiciste no me quise meter por que no cacho si cambia algo al pasarlo a django.

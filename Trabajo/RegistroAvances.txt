@@ -3,3 +3,17 @@ en la pagina contacto el titulo lo toma en blanco y sin el fondo no cacho por qu
 trate de modificarlo pero no hubo caso.
 
 y en la api que hiciste no me quise meter por que no cacho si cambia algo al pasarlo a django.
+
+
+
+----------------------------------------------------------------------------------------------------------------
+
+Cambios:
+1-Agregué fondo de portada en la página ventas/vehiculos.
+
+2-No pude solucionar lo del fondo blanco en la pagina de contactos ya que tiene muchas
+    lineas de estilos, tu deberías hacerlo ya que no lo entiendo muy bien.
+
+3-También ya enlacé correctamente mi API creada con JSON y se puede consultar sin problemas
+
+4-Y finalmente agregué el icono de la empresa en el navegador.

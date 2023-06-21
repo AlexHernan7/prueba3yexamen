@@ -413,7 +413,7 @@ textarea{
     box-shadow: 0 8px 10px 0 rgb(13, 204, 45), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: 'Permanent Marker', cursive;
     padding: 10px;
-    background: url(../imagenes/tunnningcar.png);
+    background-image: url("/static/productos/img/tunnningcar.png");
     color: white;
     text-shadow: black 2px 1px;
     background-position: center;

@@ -22,14 +22,17 @@ def vehiculos(request):
 
 
 def enviarMSJ(request):
-    a=request.POST['nombre']
-    b=request.POST['apellidoP']
-    c=request.POST['apellidoM']
-    d=request.POST['rut']
-    e=request.POST['direccion']
-    f=request.POST['email']
-    g=request.POST['phone']
-    h=request.POST['mensaje']
-    datos=enviarMSJ(nombre=a,apellidoP=b,apellidoM=c,rut=d,direccion=e,email=f,phone=g,mensaje=h)
+    a = request.POST['nombre']
+    b = request.POST['apellidoP']
+    c = request.POST['apellidoM']
+    d = request.POST['rut']
+    e = request.POST['select']
+    f = request.POST['direccion']
+    g = request.POST['email']
+    h = request.POST['phone']
+    i = request.POST['mensaje']
+    
+    datos = ContactoAdmin(nombre=a, apellidoP=b, apellidoM=c, rut=d, select=e, direccion=f, email=g, phone=h, mensaje=i)
     datos.save()
+    
     return redirect("/")

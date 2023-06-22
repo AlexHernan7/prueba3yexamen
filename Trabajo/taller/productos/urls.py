@@ -7,5 +7,6 @@ urlpatterns = [
     path('mycontacto', views.contacto, name='contacto'),
     path('mygaleria', views.galeria, name="galeria"),
     path('myvehiculo', views.vehiculos, name="vehiculos"),
+    path('enviarMSJ/',views.enviarMSJ, name='enviarMSJ'),
 ]
 

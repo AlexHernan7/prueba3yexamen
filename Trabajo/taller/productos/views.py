@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import ContactoAdmin
 
 # Create your views here.
 def index(request):
@@ -8,7 +9,10 @@ def nosotros(request):
     return render(request, 'productos/nosotros.html')
 
 def contacto(request):
-    return render(request, 'productos/contacto.html')
+    productos= ContactoAdmin.objects.raw('SELECT * from productos_contactoadmin')
+    print(productos)
+    context={'productos':productos}
+    return render(request, 'productos/contacto.html',context)
 
 def galeria(request):
     return render(request, 'productos/galeria.html')

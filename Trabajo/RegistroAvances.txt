@@ -17,3 +17,15 @@ Cambios:
 3-También ya enlacé correctamente mi API creada con JSON y se puede consultar sin problemas
 
 4-Y finalmente agregué el icono de la empresa en el navegador.
+
+----
+
+Cambios 2, DiegoRojas:
+
+1.Se crea el superusuario Django
+
+2.Se agrega el modelo "contacto admin" corrigiendo errores de escritura.
+
+3.Se añade la tableta usuarios en la pagina  "contacto" para ver los contactos de los usuarios
+
+4.Se crea la función necesaria para ver reflejado los usuarios creados en django.

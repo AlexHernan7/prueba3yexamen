@@ -9,6 +9,7 @@
 <h1 class="titC" style="padding-top: 130px; font-family: 'Permanent Marker'; font-size: 50px; text-align: center; color: white;">Contacto</h1>    
 <!-- Formulario-->
     <div class="formulario">
+
         <form action="" method="post" name="form" id="formulario">
             <div class="form-group" >
                 <div class="form-content">
@@ -56,7 +57,24 @@
             <div class="form-content" id="">
                 <input class="btn" type="submit" name="contact" value="Enviar Mensaje" style="background-color: #283b64; color: white;">
             </div>
-        </form>
+        </form> 
     </div>
+
+    <div class="container" id="msjusers" style="color: white;">
+        <div>
+            <h1>Comentarios de los usuarios</h1>
+            <br>
+            {% for productos in productos %}
+            <div id="contenedormsj">
+                <ul>
+                    <li>{{productos.nombre}} {{productos.apellidoP}} {{productos.apellidoM}}
+                    <br>
+                    {{productos.mensaje}}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
 </body>
 {% endblock%}

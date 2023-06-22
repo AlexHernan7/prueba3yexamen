@@ -398,6 +398,29 @@ textarea{
     }
   }
 
+/*Mensaje usuarios contacto*/
+
+#msjusers{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#contenedormsj{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 29%,
+        rgba(155, 155,186, 1) 100%,
+        rgba(0, 212, 255,1) 100%
+    );
+    justify-content: left;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+}
+
 /*Fin pagina contacto*/
 
 

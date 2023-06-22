@@ -21,15 +21,19 @@ def vehiculos(request):
     return render(request, 'productos/vehiculos.html')
 
 
-def enviarMSJ(request):
-    a=request.POST['nombre']
-    b=request.POST['apellidoP']
-    c=request.POST['apellidoM']
-    d=request.POST['rut']
-    e=request.POST['direccion']
-    f=request.POST['email']
-    g=request.POST['phone']
-    h=request.POST['mensaje']
-    datos=enviarMSJ(nombre=a,apellidoP=b,apellidoM=c,rut=d,direccion=e,email=f,phone=g,mensaje=h)
-    datos.save()
-    return redirect("/")
+def registrarComentario(request):
+    nombre=request.POST['nombre']
+    apellidoP=request.POST['apellidoP']
+    apellidoM=request.POST['apellidoM']
+    rut=request.POST['rut']
+    genero=request.POST['genero']
+    direccion=request.POST['direccion']
+    email=request.POST['email']
+    phone=request.POST['phone']
+    mensaje=request.POST['mensaje']
+
+    comentario=ContactoAdmin.objects.create(nombre=nombre,apellidoP=apellidoP,
+                                            apellidoM=apellidoM,rut=rut,genero=genero,direccion=direccion,
+                                            email=email,phone=phone,mensaje=mensaje)
+
+    return redirect("/mycontacto")

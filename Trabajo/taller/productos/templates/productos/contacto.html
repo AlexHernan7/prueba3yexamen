@@ -9,8 +9,7 @@
 <h1 class="titC" style="padding-top: 130px; font-family: 'Permanent Marker'; font-size: 50px; text-align: center; color: white;">Contacto</h1>    
 <!-- Formulario-->
     <div class="formulario">
-
-        <form action="" method="post" name="form" id="formulario">
+        <form action="{% url 'registrarComentario' %}" id="formulario" method="POST">{% csrf_token %}
             <div class="form-group" >
                 <div class="form-content">
                     <label for="name">Nombres</label>
@@ -22,7 +21,7 @@
                 </div>
                 <div class="form-content">
                     <label for="apMaterno">Apellido Materno</label>
-                    <input type="text" id="apMaterno" name="apeliidoM" placeholder="xxxxxx" maxlength="30" minlength="3" pattern="[A-Za-z]+">
+                    <input type="text" id="apMaterno" name="apellidoM" placeholder="xxxxxx" maxlength="30" minlength="3" pattern="[A-Za-z]+">
                 </div>
                 <div class="form-content">
                     <label for="rut">Rut</label>
@@ -30,10 +29,10 @@
                 </div>
                 <div class="form-content" id="box-container">
                     <label for="select-box">Genero</label>
-                    <select name="select" id="select-box">
-                        <option value="" selected>Seleccione un genero</option>
-                        <option value="F">Femenino</option>
-                        <option value="M">Masculino</option>
+                    <select name="genero" id="select-box">
+                        <option value="0" selected>Seleccione un genero</option>
+                        <option value="1">Femenino</option>
+                        <option value="2">Masculino</option>
                     </select>
                 </div>
                 

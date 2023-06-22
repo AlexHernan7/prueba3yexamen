@@ -29,3 +29,8 @@ Cambios 2, DiegoRojas:
 3.Se añade la tableta usuarios en la pagina  "contacto" para ver los contactos de los usuarios
 
 4.Se crea la función necesaria para ver reflejado los usuarios creados en django.
+
+
+Cambios 3, Diego Rojas:
+
+1.Se agregó la funcion a views, urls y models para poder visualizar los datos del formulario una vez enviados

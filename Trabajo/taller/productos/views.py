@@ -44,7 +44,7 @@ def registrarComentario(request):
 
 @login_required
 def products(request):
-    return render(request, 'core/products.html')
+    return render(request, 'productos/products.html')
 
 
 def register(request):
@@ -58,4 +58,4 @@ def register(request):
             user = authenticate(username=user_creation_form.cleaned_data['username'], password=user_creation_form.cleaned_data['password1'])
             login(request,user)
             return redirect('index')
-    return render(request, 'productos/registration/register.html',data)
+    return render(request, 'registration/register.html',data)

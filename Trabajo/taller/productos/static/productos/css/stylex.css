@@ -522,3 +522,25 @@ textarea{
     }
 }
 
+/*login*/
+
+#pag-login{
+    height: 100vh;
+    width: 100%;
+}
+#login{
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+}
+#div-login{
+    width: 100%;
+}
+.form-label{
+    color: black;
+}
+.tit-login{
+    color: white;
+    font-size: 50px;
+    font-family: 'Permanent Marker', cursive;
+}

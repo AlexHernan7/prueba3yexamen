@@ -34,6 +34,12 @@
                 <a href="{% url 'contacto' %}">Contacto</a>
                 <a href="{% url 'vehiculos' %}">Ventas</a>
                 <a href="{% url 'register' %}">Registrarse</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">Cerrar sesión</a>
+                    <a href="#">{{user.username}}</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Iniciar sesión</a>
+                {% endif %}
             </nav>
         </div>
     </header>

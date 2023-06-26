@@ -3,6 +3,7 @@ from .models import ContactoAdmin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from .forms import CustomUserCreationForm
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 
 # Create your views here.
@@ -57,5 +58,6 @@ def register(request):
             user_creation_form.save()
             user = authenticate(username=user_creation_form.cleaned_data['username'], password=user_creation_form.cleaned_data['password1'])
             login(request,user)
+            messages.success(request,"Te has registrado correctamente")
             return redirect('index')
     return render(request, 'registration/register.html',data)

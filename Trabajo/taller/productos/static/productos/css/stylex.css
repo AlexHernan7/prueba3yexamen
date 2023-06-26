@@ -117,6 +117,7 @@ p{
 .pie-pagina{
     width: 100%;
     background-color: black;
+    position: absolute;
 }
 .pie-pagina .grupo-1{
     width: 100%;
@@ -552,3 +553,38 @@ textarea{
     color: white;
     text-decoration: none;
 }
+/*Pagina Registro*/
+
+#pag-registro{
+    width: 100%;
+    height: 100vh;
+}
+#form-registro{
+    width: 100%;
+    border-radius: 0;
+    height: 100vh;
+    padding-bottom: 250px;
+}
+#registro_usuario{
+    color: white;
+    font-size: 50px;
+    padding-top: 260px;
+    font-family: 'Permanent Marker', cursive;
+}
+@media screen and (max-width: 768px) {
+    #pag-registro {
+      height: auto;
+    }
+    
+    #form-registro {
+      height: auto;
+      padding-bottom: 90px;
+    }
+    
+    #registro_usuario {
+      padding-top: 120px;
+      font-size: 30px;
+      font-size: 35px;
+    }
+  }
+  

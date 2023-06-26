@@ -2,24 +2,23 @@
 
 {% block contenido %}
 
-{% load crispy_forms_tags %}
-<h3 id="registro_usuario">REGISTRO DE USUARIO</h3>
-
-<br>
-<div class="container d-flex justify-content-center align-items-center">
-  <form action="" method="post">
-      <div class="card mx-auto" style="width: 30rem;">
+<body id="pag-registro">
+  <div id="div-registro">
+    <div class="">
+      <form action="" method="post" id="form-registro">
+        <h1 id="registro_usuario">Registro de usuario</h1>
+        {% csrf_token %}
+        {% load crispy_forms_tags %}
+        
+        <div class="card mx-auto">
           <div class="card-body">
-            <h5 class="card-title">Complete todos los campos</h5>
-            {% csrf_token %}
             {{ form | crispy }}
-            <a href="{% url 'index' %}" class="card-link">Inicio</a>
-            <a href="{% url 'login' %}" class="card-link">Iniciar Sesion</a>
-
             <button class="btn btn-sm btn-primary float-end" type="submit">Registrarse</button>
           </div>
         </div>
-        
-  </form>
-</div>
+      </form>
+    </div>
+  </div>
+</body>
 {% endblock %}
+

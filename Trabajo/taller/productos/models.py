@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 
@@ -8,6 +9,11 @@ opciones_genero = [
     (2,'Masculino')
 ]
 
+
+def validar_mensaje(value):
+    if not value:
+        raise ValidationError('El campo mensaje es obligatorio.')
+    
 class ContactoAdmin(models.Model):
     nombre=models.CharField(max_length=30)
     apellidoP=models.CharField(max_length=30)

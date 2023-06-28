@@ -34,3 +34,7 @@ Cambios 2, DiegoRojas:
 Cambios 3, Diego Rojas:
 
 1.Se agregó la funcion a views, urls y models para poder visualizar los datos del formulario una vez enviados
+
+
+
+Estamos casi listos

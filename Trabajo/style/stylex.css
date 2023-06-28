@@ -404,6 +404,27 @@ textarea{
     }
   }
 
+#msjusers{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#contenedormsj{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 29%,
+        rgba(155, 155,186, 1) 100%,
+        rgba(0, 212, 255,1) 100%
+    );
+    justify-content: left;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+}
+
 /*Fin pagina contacto*/
 
 
@@ -423,6 +444,26 @@ textarea{
 
 .venta-vehiculos{
     font-family: 'Permanent Marker', cursive;
+}
+
+/*Pagina tienda*/
+
+.tienda-titulo{
+    font-family: 'Permanent Marker', cursive;
+}
+
+/*Fin pagina tienda*/
+
+.caja-productos{
+    box-shadow: 0 8px 10px 0 rgb(13, 204, 45), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Permanent Marker', cursive;
+    padding: 10px;
+    background: url(../imagenes/tunnningcar.png);
+    color: white;
+    text-shadow: black 2px 1px;
+    background-position: center;
+    border-radius: 10px;
+    min-height: 200px; 
 }
 
 /*Ajustes pantallas pequeñas*/

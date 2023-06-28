@@ -24,3 +24,14 @@ class ContactoAdmin(models.Model):
         return str(self.nombre)+" "+str(self.apellidoP) 
     
 
+# clase productos
+class Producto(models.Model):
+    nombreP=models.CharField(max_length=30)
+    categoriaP=models.CharField(max_length=30)
+    modelovehiculoP=models.CharField(max_length=30)
+    precioP=models.IntegerField()
+    imagen = models.ImageField(upload_to="productos", null=True)
+
+    def __str__(self):
+        return str(self.nombreP)+" "+str(self.precioP) 
+

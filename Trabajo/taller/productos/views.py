@@ -1,10 +1,12 @@
+from productos.Carrito import Carrito
 from django.shortcuts import render, redirect
-from .models import ContactoAdmin
+from .models import ContactoAdmin, Producto
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from .forms import CustomUserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+
 
 # Create your views here.
 def index(request):
@@ -43,10 +45,6 @@ def registrarComentario(request):
 
     return redirect("/mycontacto")
 
-@login_required
-def products(request):
-    return render(request, 'productos/products.html')
-
 
 def register(request):
     data = {
@@ -61,3 +59,35 @@ def register(request):
             messages.success(request,"Te has registrado correctamente")
             return redirect('index')
     return render(request, 'registration/register.html',data)
+
+
+#  Carrito
+
+@login_required
+def tienda(request):
+    productos = Producto.objects.all()
+    return render(request, 'productos/tienda.html', {'productos': productos})
+
+
+def agregar_producto(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.agregar(producto)
+    return redirect("/mytienda")
+
+def eliminar_producto(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.eliminar(producto)
+    return redirect("/mytienda")
+
+def restar_producto(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.restar(producto)
+    return redirect("/mytienda")
+
+def limpiar_carrito(request):
+    carrito = Carrito(request)
+    carrito.limpiar()
+    return redirect("/mytienda")

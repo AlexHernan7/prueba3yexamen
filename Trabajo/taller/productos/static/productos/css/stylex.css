@@ -446,7 +446,7 @@ textarea{
 /*Ajustes pantallas pequeñas*/
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
 	header .logo, header nav {
 		width:100%;
 		text-align:center;

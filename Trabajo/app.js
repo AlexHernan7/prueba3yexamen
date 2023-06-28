@@ -30,7 +30,7 @@ formulario.addEventListener('submit', function(evento) {
     return;
   }
   if (!direccion) {
-    alert('Ingrese un rut valido'); 
+    alert('Ingrese una direccion valida'); 
     return;
   }
   if (!telefono) {

@@ -588,3 +588,17 @@ textarea{
     }
   }
   
+
+#carrito-tienda{
+    padding-bottom: 50px;
+}
+
+#div-img{
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#div-foto{
+    width: 23rem;
+}

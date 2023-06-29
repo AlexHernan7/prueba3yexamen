@@ -13,6 +13,9 @@ urlpatterns = [
     path('registrarComentario/',views.registrarComentario, name='registrarComentario'),
     path('register/',views.register, name='register'),
     path('agregar-crud/', views.agregarCrud, name='agregar_crud'),
+    path('listar-crud/', views.listarCrud, name='listar_crud'),
+    path('modificar-crud/<id>/', views.modificarCrud, name='modificar_crud'),
+    path('eliminar-crud/<id>/', views.eliminar_crud, name='eliminar_crud'),
 
     
     path('mytienda/', views.tienda, name='tienda'),

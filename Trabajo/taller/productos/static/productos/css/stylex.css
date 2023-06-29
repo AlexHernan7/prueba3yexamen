@@ -604,17 +604,17 @@ textarea{
 }
 /*Pag agregar productos*/
 #tit-agregar-crud{
-    
+
     font-size: 3rem;
     padding-top: 120px;
     text-align: center;
     color: white;
     font-family: 'Permanent Marker', cursive;
-}  
+}
 
 #div-agregar-crud{
     padding-bottom: 30px;
-    width: auto;
+    /* padding-left: 20rem; */
 }
 
 #pag-crud{
@@ -627,6 +627,23 @@ textarea{
     );
 }
 
-#form.crud{
-    color: white;
+#formulario-crud{
+    font-style: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-bottom: 50px;
+}
+/*Listado Crud*/
+
+#tit-listado-curd{
+    font-size: 3rem;
+    padding-top: 120px;
+    text-align: center;
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    padding-bottom: 1.5rem;  
+}
+#tabla-productos{
+    padding-bottom: 1.5rem;
 }

@@ -7,28 +7,23 @@
 {% load crispy_forms_tags %}
 
 <body id="pag-crud">
-    <div class="row" id="div-agregar-crud">
-        <div class="col-12 col-md-6 offset-md-3">
+    <div id="div-agregar-crud" class="container">
+        <div class="col-sm-12 col-md-12">
             <h1 id="tit-agregar-crud">Agregar Producto</h1>
-            <div class="">
-                <div class="">
-                    <form action="" method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form | crispy }}
-                        
-                        <div class="d-flex justify-content-end">
-                            <input type="reset" value="cancelar" class="btn btn-secondary">
-                            &nbsp;
-                            <input type="submit" value="guardar" class="btn btn-primary">
-                        </div>
-                        
-                    </form>
-                    {{mensaje}}
-                </div>
+            <div class="container" id="formulario-crud">
+                <form action="" method="post" enctype="multipart/form-data" >
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="d-flex justify-content-end">
+                        <input type="reset" value="cancelar" class="btn btn-secondary">
+                        &nbsp;
+                        <input type="submit" value="guardar" class="btn btn-primary">
+                    </div>
+                </form>
+                {{mensaje}}
             </div>
         </div>
     </div>
 </body>
 {% endblock %}
 
-<!-- jhsdkajhsdkasjhdkjsadhk -->

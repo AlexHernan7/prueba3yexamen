@@ -1,5 +1,5 @@
 from productos.Carrito import Carrito
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import ContactoAdmin, Producto
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
@@ -106,3 +106,31 @@ def agregarCrud(request):
         else:
             data["form"] = formulario
     return render(request, 'productos/agregarCrud.html', data)
+
+def listarCrud(request):
+    productos = Producto.objects.all()
+
+    data = {
+        'productos': productos
+    }
+    return render(request, 'productos/listarCrud.html', data)
+
+def modificarCrud(request, id):
+    producto = get_object_or_404(Producto, id=id)
+    data = {
+        'form': ProductoForm(instance=producto)
+    }
+
+    if request.method == 'POST':
+        formulario = ProductoForm(data=request.POST, instance=producto, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect("listar_crud")
+        data["form"] = formulario
+    return render(request, 'productos/modificarCrud.html', data)
+
+
+def eliminar_crud(request, id):
+   producto = get_object_or_404(Producto, id=id)
+   producto.delete()
+   return redirect("listar_crud") 

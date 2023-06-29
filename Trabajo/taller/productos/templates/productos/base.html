@@ -36,6 +36,7 @@
                 <a href="{% url 'tienda' %}">Tienda</a>
                 <a href="{% url 'agregar_crud' %}">Productos</a>
                 {% if user.is_authenticated %}
+                    <a href="{% url 'listar_crud' %}">Stock</a>
                     <a href="{% url 'logout' %}">Cerrar sesión</a>
                     <a href="#">{{user.username}}</a>
                 {% else %}

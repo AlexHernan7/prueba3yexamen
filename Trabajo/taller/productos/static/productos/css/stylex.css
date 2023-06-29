@@ -602,4 +602,30 @@ textarea{
 #div-foto{
     width: 23rem;
 }
-  
+/*Pag agregar productos*/
+#tit-agregar-crud{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    padding-top: 120px;
+    text-align: center;
+    color: white;
+}  
+
+#div-agregar-crud{
+    padding-bottom: 30px;
+    width: auto;
+}
+
+#pag-crud{
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 29%,
+        rgba(155, 155,186, 1) 100%,
+        rgba(0, 212, 255,1) 100%
+    );
+}
+
+#form.crud{
+    color: white;
+}

@@ -6,6 +6,7 @@ from django.contrib.auth import logout
 from .forms import CustomUserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from .forms import ProductoForm
 
 
 # Create your views here.
@@ -91,3 +92,17 @@ def limpiar_carrito(request):
     carrito = Carrito(request)
     carrito.limpiar()
     return redirect("/mytienda")
+
+def agregarCrud(request):
+    data = {
+        'form': ProductoForm()
+    }
+
+    if request.method == 'POST':
+        formulario = ProductoForm(data=request.POST, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"] = "guardado correctamente"
+        else:
+            data["form"] = formulario
+    return render(request, 'productos/agregarCrud.html', data)

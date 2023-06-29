@@ -12,7 +12,7 @@ urlpatterns = [
     path('myvehiculo', views.vehiculos, name="vehiculos"),
     path('registrarComentario/',views.registrarComentario, name='registrarComentario'),
     path('register/',views.register, name='register'),
-
+    path('agregar-crud/', views.agregarCrud, name='agregar_crud'),
 
     
     path('mytienda/', views.tienda, name='tienda'),

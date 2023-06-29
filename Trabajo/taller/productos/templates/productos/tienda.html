@@ -5,30 +5,34 @@
 {% block contenido%}
 <body>
     <div class="container">
-        <div class="row">
-            <div style= "padding-top: 130px;" class="col-12 align-self-center"><h1 class="venta-vehiculos">Bienvenido a nuestra tienda, {{user.username}}.</h1></div>
+        <div style="padding-top: 130px;" class="align-self-center">
+            <h1 class="venta-vehiculos">Bienvenido a nuestra tienda, {{user.username}}</h1>
         </div>
-        <div class="row" style="margin-bottom: 30px; padding-top: 130px;">
-            {% for producto in productos %}
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4" id="div-img">
-                <div class="card" id="div-foto">
-                    <img src="{{producto.imagen.url}}" class="card-img-top" style="max-width: 370px; max-height: 250px;" alt="">
-                    <div class="card-body">
-                        <h5 class="card-tittle">{{producto.nombreP}}</h5>
-                        <p class="card-text">{{producto.categoriaP}}</p>
-                        <p class="card-text">${{producto.precioP}}</p>
-                        <p class="card-text">{{producto.modelovehiculoP}}</p>
-                        <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row" style="margin-bottom: 30px; padding-top: 30px;">
+                    {% for producto in productos %}
+                    <div class="col-sm-12 col-md-6" id="div-img">
+                        <div class="card" id="div-foto">
+                            <img src="{{producto.imagen.url}}" class="card-img-top" style="max-width: 370px; max-height: 250px; min-height: 250px;" alt="">
+                            <div class="card-body">
+                                <h5 class="card-tittle">{{producto.nombreP}}</h5>
+                                <p class="card-text">{{producto.categoriaP}}</p>
+                                <p class="card-text">${{producto.precioP}}</p>
+                                <p class="card-text">{{producto.modelovehiculoP}}</p>
+                                <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
+                            </div>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
-            {% endfor %}
-        </div>
-            <div class="col-sm-12" id="carrito-tienda">
-                {% include "productos/carrito.html" %}
+            <div class="col-xl-1 flex-column" id="carrito-tienda" style="margin-bottom: 30px; padding-top: 50px; ">
+                <div class="container">
+                    {% include "productos/carrito.html" %}
+                </div>
             </div>
         </div>
     </div>
 </body>
-
 {% endblock%}

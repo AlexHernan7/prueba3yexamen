@@ -9,8 +9,7 @@
         {% csrf_token %}
         {% load crispy_forms_tags %}
         <div class="card mx-auto" style="width: 25rem; color: black;">
-            <div class="card-body">
-              <h5 class="card-title">Ingrese sus Credenciales</h5>
+            <div class="card-body" id="carta">
               {{ form | crispy }}
               <div class="d-grid gap-2">
                 <button class="btn btn-sm btn-primary" id="btn-login" ><a href="{% url 'index' %}" class="card-link">Inicio</a></button>

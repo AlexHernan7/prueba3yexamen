@@ -35,8 +35,13 @@
         </div>
         <div class="container">
             <div class="container">
-                {% if user.is_authenticated and perms.myapp.can_view_crud %}
+                {% if user.is_authenticated and perms.productos.can_view_crud %}
                     {% include "productos/listarCrud.html" %}
+                    <div id="container-tienda">
+                        <div class="btn btn">
+                            <a class="link-transparent" id="linkss" href="{% url 'agregar_crud' %}">Agregar productos</a>
+                        </div>
+                    </div>
                 {% else %}
                     <div></div>
                 {% endif %}

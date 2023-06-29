@@ -95,6 +95,7 @@ def limpiar_carrito(request):
     carrito.limpiar()
     return redirect("/mytienda")
 
+@permission_required('productos.can_view_crud')
 def agregarCrud(request):
     data = {
         'form': ProductoForm()
@@ -104,12 +105,12 @@ def agregarCrud(request):
         formulario = ProductoForm(data=request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
-            data["mensaje"] = "guardado correctamente"
+            data["mensaje"] = "Guardado correctamente!"
         else:
             data["form"] = formulario
     return render(request, 'productos/agregarCrud.html', data)
 
-@permission_required('myapp.can_view_crud')
+@permission_required('productos.can_view_crud')
 def listarCrud(request):
     productos = Producto.objects.all()
 
@@ -117,7 +118,8 @@ def listarCrud(request):
         'productos': productos
     }
     return render(request, 'productos/listarCrud.html', data)
-@permission_required('myapp.can_view_crud')
+
+@permission_required('productos.can_view_crud')
 def modificarCrud(request, id):
     producto = get_object_or_404(Producto, id=id)
     data = {
@@ -128,12 +130,12 @@ def modificarCrud(request, id):
         formulario = ProductoForm(data=request.POST, instance=producto, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
-            return redirect("listar_crud")
+            return redirect("/mytienda")
         data["form"] = formulario
     return render(request, 'productos/modificarCrud.html', data)
 
-@permission_required('myapp.can_view_crud')
+@permission_required('productos.can_view_crud')
 def eliminar_crud(request, id):
    producto = get_object_or_404(Producto, id=id)
    producto.delete()
-   return redirect("listar_crud") 
+   return redirect("/mytienda") 

@@ -538,7 +538,7 @@ textarea{
     width: 100%;
 }
 .form-label{
-    color: black;
+    color: white;
 }
 .tit-login{
     color: white;
@@ -570,6 +570,20 @@ textarea{
     font-size: 50px;
     padding-top: 260px;
     font-family: 'Permanent Marker', cursive;
+}
+#carta{
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        135deg,
+        rgba(2, 0, 36, 1) 29%,
+        rgba(155, 155,186, 1) 100%,
+        rgba(0, 212, 255,1) 100%
+    );
+    border: none;
+}
+
+#carta, ul li, #hint_id_password2, #hint_id_username{
+    color: white;
 }
 @media screen and (max-width: 768px) {
     #pag-registro {
@@ -646,4 +660,17 @@ textarea{
 }
 #tabla-productos{
     padding-bottom: 1.5rem;
+}
+
+
+#linkss {
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, 0.3); /* Color del texto */
+    text-decoration: none; /* Opcional: subrayar el texto */
+    cursor: pointer;
+}
+
+#container-tienda{
+    padding-bottom: 10px;
 }

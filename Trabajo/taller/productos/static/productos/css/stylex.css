@@ -604,11 +604,12 @@ textarea{
 }
 /*Pag agregar productos*/
 #tit-agregar-crud{
-    font-family: 'Permanent Marker', cursive;
+    
     font-size: 3rem;
     padding-top: 120px;
     text-align: center;
     color: white;
+    font-family: 'Permanent Marker', cursive;
 }  
 
 #div-agregar-crud{

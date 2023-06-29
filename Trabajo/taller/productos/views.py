@@ -7,6 +7,7 @@ from .forms import CustomUserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from .forms import ProductoForm
+from django.contrib.auth.decorators import permission_required
 
 
 # Create your views here.
@@ -58,6 +59,7 @@ def register(request):
             user = authenticate(username=user_creation_form.cleaned_data['username'], password=user_creation_form.cleaned_data['password1'])
             login(request,user)
             messages.success(request,"Te has registrado correctamente")
+            
             return redirect('index')
     return render(request, 'registration/register.html',data)
 
@@ -107,6 +109,7 @@ def agregarCrud(request):
             data["form"] = formulario
     return render(request, 'productos/agregarCrud.html', data)
 
+@permission_required('myapp.can_view_crud')
 def listarCrud(request):
     productos = Producto.objects.all()
 
@@ -114,7 +117,7 @@ def listarCrud(request):
         'productos': productos
     }
     return render(request, 'productos/listarCrud.html', data)
-
+@permission_required('myapp.can_view_crud')
 def modificarCrud(request, id):
     producto = get_object_or_404(Producto, id=id)
     data = {
@@ -129,7 +132,7 @@ def modificarCrud(request, id):
         data["form"] = formulario
     return render(request, 'productos/modificarCrud.html', data)
 
-
+@permission_required('myapp.can_view_crud')
 def eliminar_crud(request, id):
    producto = get_object_or_404(Producto, id=id)
    producto.delete()

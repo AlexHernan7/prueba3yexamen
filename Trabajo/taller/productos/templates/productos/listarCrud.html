@@ -1,8 +1,27 @@
-
-
-{% load static %}
+{% block js %}
+<script>
+    function eliminarProducto(id){
+        Swal.fire({
+            "title": "¿Estas seguro de eliminar el producto?",
+            "text": "esta acción no se puede deshacer",
+            "icon": "question",
+            "showCancelButton":true,
+            "cancelButtonText": "No, Cancelar",
+            "confirmarButtonText": "Si, Eliminar",
+            "reverseButtons":true,
+            "confirmButtonColor": "#dc3545"
+        })
+        .then(function(result){
+            if(result.isConfirmed){
+                window.location.href = "/eliminar_crud/"+id+"/"
+            }
+        })
+    }
+</script>
+{% endblock %}
 
 {% block contenido %}
+{% load static %}
 {% load humanize %}
 
 <div id="tabla-productos">
@@ -34,6 +53,7 @@
             {% endfor %}
         </table>
     </div>
+
 </div>
     
 

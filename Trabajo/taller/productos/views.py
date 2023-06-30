@@ -130,6 +130,7 @@ def modificarCrud(request, id):
         formulario = ProductoForm(data=request.POST, instance=producto, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
+            messages.success(request, 'Modificado correctamente')
             return redirect("/mytienda")
         data["form"] = formulario
     return render(request, 'productos/modificarCrud.html', data)

@@ -139,4 +139,5 @@ def modificarCrud(request, id):
 def eliminar_crud(request, id):
    producto = get_object_or_404(Producto, id=id)
    producto.delete()
+   messages.success(request, 'Eliminado correctamente')
    return redirect("/mytienda") 

@@ -1,27 +1,27 @@
+
+
+{% block contenido %}
 {% block js %}
 <script>
     function eliminarProducto(id){
         Swal.fire({
-            "title": "¿Estas seguro de eliminar el producto?",
-            "text": "esta acción no se puede deshacer",
-            "icon": "question",
+            "title":"¿Estas seguro?",
+            "text":"esta acción no se puede deshacer",
+            "icon":"question",
             "showCancelButton":true,
-            "cancelButtonText": "No, Cancelar",
-            "confirmarButtonText": "Si, Eliminar",
+            "cancelButtonText":"No, Cancelar",
+            "confirmButtonText":"Si, Eliminar",
             "reverseButtons":true,
-            "confirmButtonColor": "#dc3545"
+            "confirmButtonColor":"#dc3545",
         })
         .then(function(result){
             if(result.isConfirmed){
-                window.location.href = "/eliminar_crud/"+id+"/"
+                window.location.href = "/eliminar-crud/"+id+"/"
             }
         })
     }
 </script>
 {% endblock %}
-
-{% block contenido %}
-{% load static %}
 {% load humanize %}
 
 <div id="tabla-productos">
@@ -45,7 +45,7 @@
                 <td>${{ p.precioP | intcomma }}</td>
                 <td>
                     <a href="{% url 'modificar_crud' p.id %}" class="btn btn-info btn-sm" style="height: 30px; width: 85px;">Modificar</a>
-                    <a href="{% url 'eliminar_crud' p.id %}" class="btn btn-danger btn-sm" style="height: 30px; width: 85px;">Eliminar</a>
+                    <a href="#" onclick="eliminarProducto({{ p.id }})" class="btn btn-danger btn-sm" style="height: 30px; width: 85px;">Eliminar</a>
                 </td>
             </tr>
             
@@ -58,3 +58,4 @@
     
 
 {% endblock %}
+
